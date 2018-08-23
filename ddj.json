@@ -1,0 +1,65 @@
+[
+ {
+   "long": 53.545762,
+   "lat": 10.004017,
+   "newsroom": "Datenlese",
+   "company": "Spiegel Online",
+   "city": "Hamburg",
+   "head": "Christina Elmer",
+   "icon": "icons/marker.png"
+ },
+ {
+   "long": 48.144395,
+   "lat": 11.553605,
+   "newsroom": "BR Data",
+   "company": "Bayrischer Rundfunk",
+   "city": "München",
+   "head": "Uli Köppen",
+   "icon": "icons/marker.png"
+ },
+ {
+   "long": 47.417563,
+   "lat": 8.560453,
+   "newsroom": "SRF Data",
+   "company": "Schweizer Rundfunk und Fernsehen",
+   "city": "Zürich",
+   "head": "Sandra Manca",
+   "icon": "icons/marker.png"
+ },
+ {
+   "long": 47.364939,
+   "lat": 8.547561,
+   "newsroom": "NZZ Storytelling",
+   "company": "Neue Zürcher Zeitung",
+   "city": "Zürich",
+   "head": "David Bauer",
+   "icon": "icons/marker.png"
+ },
+ {
+   "long": 52.518712,
+   "lat": 13.39018,
+   "newsroom": "Team Investigativ/Daten",
+   "company": "Zeit Online",
+   "city": "Berlin",
+   "head": "Sascha Venohr",
+   "icon": "icons/marker.png"
+ },
+ {
+   "long": 52.50762,
+   "lat": 13.39804,
+   "newsroom": "Interaktiv-Team",
+   "company": "Berliner Morgenpost",
+   "city": "Berlin",
+   "head": "Julius Tröger",
+   "icon": "icons/marker.png"
+ },
+ {
+   "long": 51.233059,
+   "lat": 6.698716,
+   "newsroom": "RP Data",
+   "company": "Rheinische Post",
+   "city": "Düsseldorf",
+   "head": "Phil Ninh",
+   "icon": "icons/marker.png"
+ }
+]

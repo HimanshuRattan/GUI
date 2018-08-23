@@ -4,99 +4,19 @@
       <meta charset="UTF-8">
       <title>GUI</title>
       <link rel="stylesheet" href="style.css">
-      <meta charset="utf-8">
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <!--this is new-->
-
-    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
-      
-
-   
-   
-   
+      <link rel="stylesheet" href="leaflet.css">
+      <script type="text/javascript" src="leaflet.js"></script>
+      <script type="text/javascript" src="jquery.min.js"></script>
+      <script type="text/javascript" src="app.js"></script>
     </head>
-    <body>
+    <body onload="myFunction()">
       <div class="grid-container">
-        <div id="map">1</div>
-
-   <script type="text/javascript">
-    var mapboxTiles = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-        attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
-    });
-    //possible colors 'red', 'darkred', 'orange', 'green', 'darkgreen', 'blue', 'purple', 'darkpuple', 'cadetblue'
-    var cafeIcon = L.AwesomeMarkers.icon({
-        prefix: 'fa', //font awesome rather than bootstrap
-        markerColor: 'red', // see colors above
-        icon: 'coffee' //http://fortawesome.github.io/Font-Awesome/icons/
-    });
-    var map = L.map('map')
-        .addLayer(mapboxTiles)
-        .setView([12.827730299999999, 80.0456444], 50);
-    var promise = $.getJSON("businesses.json");
-    promise.then(function(data) {
-        var allbusinesses = L.geoJson(data);
-                var cafes = L.geoJson(data, {
-            filter: function(feature, layer) {
-                return feature.properties.BusType == "Cafe";
-            },
-            pointToLayer: function(feature, latlng) {
-                return L.marker(latlng, {
-                    icon: cafeIcon
-                }).on('mouseover', function() {
-                    this.bindPopup(feature.properties.Name).openPopup();
-                });
-            }
-        });
-        var others = L.geoJson(data, {
-            filter: function(feature, layer) {
-                return feature.properties.BusType != "Cafe";
-            },
-            pointToLayer: function(feature, latlng) {
-                return L.marker(latlng, {
-                }).on('mouseover', function() {
-                    this.bindPopup(feature.properties.Name).openPopup();
-                });
-            }
-        });
-        map.fitBounds(allbusinesses.getBounds(), {
-            padding: [50, 50]
-        });
-        cafes.addTo(map)
-        others.addTo(map)
-        // The JavaScript below is new
-        $("#others").click(function() {
-            map.addLayer(others)
-            map.removeLayer(cafes)
-        });
-        $("#cafes").click(function() {
-            map.addLayer(cafes)
-            map.removeLayer(others)
-        });
-        $("#allbus").click(function() {
-            map.addLayer(cafes)
-            map.addLayer(others)
-        });
-    });
-    </script>
-        
-        <div class="item2"></div>
+        <div id="map"></div>     
+        <div class="item2">2</div>
         <div class="item3">3</div>
         <div class="item4">4</div>
 
-
       </div>
-
-
-      <!--Scripts-->
-      <script src="main.js"></script>
-      
-      
       
     </body>
   </html>
