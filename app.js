@@ -1,3 +1,6 @@
+var map;
+var rp;
+
 const {app, BrowserWindow} = require('electron')
   
   function createWindow () {
@@ -18,14 +21,16 @@ function getInput(){
   var y=document.getElementById("lat2").value;
   var z=document.getElementById("long2").value;
  // document.getElementById("item4").innerHTML = "Value of z="+z;
-
+ // TODO: Check if they are valid values first. 
+  L.marker([w, x], {icon: rp}).addTo(map);
+  L.marker([y, z], {icon: rp}).addTo(map);
 }
   
 
 
 function myFunction() {
 
-  var map = L.map('map').setView([12.818825299999999, 80.0478493], 13);
+  map = L.map('map').setView([12.818825299999999, 80.0478493], 13);
   // improve experience on mobile
   if (map.tap) map.tap.disable();
   L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
@@ -45,7 +50,7 @@ function myFunction() {
       popupAnchor: [0, -60]
   });
 
-  var rp = L.icon({
+  rp = L.icon({
       iconUrl: 'icons/marker.png',
       iconSize:     [52, 60], 
       iconAnchor:   [26, 60], 
