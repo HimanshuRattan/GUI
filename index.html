@@ -9,14 +9,20 @@
       <script type="text/javascript" src="jquery.min.js"></script>
       <script type="text/javascript" src="app.js"></script>
     </head>
-    <body onload="myFunction()">
+    <body onload="myFunction();">
       <div class="grid-container">
         <div id="map"></div>     
-        <div class="item2">2</div>
-        <div class="item3">3</div>
-        <div class="item4">4</div>
+        <div class="item2">
+        	<h1>Inputs</h1>
+        	<input type="text" id="lat1" size="20" value="Latitude" onfocus="this.value=''"></input>
+        	<input type="text" id="long1" size="20" value="Longitude" onfocus="this.value=''"></input><br><br>
+			<input type="text" id="lat2" size="20" value="Latitude" onfocus="this.value=''"></input>
+        	<input type="text" id="long2" size="20" value="Longitude" onfocus="this.value=''"></input><br><br>
+        	<button id="button" onclick="getInput();">Start</button>
 
+		</div>
+        <div class="item3">3</div>
+        <div id="item4">4</div>
       </div>
-      
     </body>
   </html>

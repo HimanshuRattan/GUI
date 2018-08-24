@@ -1,9 +1,11 @@
 .grid-container{
 	display:grid;
-	grid-template-columns: auto auto auto;
+	grid-template-columns: 865px 495px;
 	/*grid-template-rows: auto auto;*/
+	/*justify-content: space-between;*/
+	align-content: center;
 	grid-gap: 2px;
-	padding: 2px;
+
 }
 
 .grid-container > div {
@@ -11,30 +13,63 @@
 }
 
 #map {
-	grid-column: 1/span 2;
+	/*grid-column: 1/span 2;*/
 	background-color: grey;
 	height: 500px;
 
 }
 
 .item2 {
-	background-color: blue;
+	background-color: #3F748D;
 	height: 500px;
+	font-family: 'BankGothic Md BT';
 }
 
 
 .item3 {
 	background-color: green;
-	grid-column: 1/span 2;
+	/*grid-column: 1/span 2;*/
 	height: 180px;
 
 }
 
-.item4 {
+#item4 {
 	background-color: yellow;
 	height: 180px;
 }
 
+.item2 > input {
+	border: 1px #828081 solid;
+    padding: 5px;
+    color: #828081;
+    font-variant: small-caps;
+    margin-bottom: 10px;
+    width: 150px;
+    font-family: Tahoma;
+    font-variant: small-caps
+}
+
+.item2 > input:hover {
+	border: 2px black solid;
+    color: #94618E;
+}
+.item2 > button {
+	font-family: Tahoma;
+    font-variant: small-caps;
+    background-color: #5C97B4;
+    border: 0px;
+    border-radius: 2px;
+    color: white;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    font-variant: small-caps;
+    width: 225px;
+}
+.item2 > button:hover {
+	border: 2px black solid;
+	background-color: #183D4F;
+	color:white;
+}
 
 .leaflet-popup-content {
 /* change size of margin */
