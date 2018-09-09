@@ -8,15 +8,18 @@
       <script type="text/javascript" src="leaflet.js"></script>
       <script type="text/javascript" src="jquery.min.js"></script>
       <script type="text/javascript" src="app.js"></script>
+      <script type="text/javascript" src="demo_dgram.js"></script>
     </head>
     <body onload="myFunction();">
       <div class="grid-container">
         <div id="map"></div>     
         <div class="item2">
-        	<h1>Inputs</h1>
+        	<h1>Inputs</h1>  
+          &nbsp IP : <input type="text" id="ip" size="20" value="IP" onfocus="this.value=''"></input><br>
+          Port: <input type="text" id="port" size="20" value="Port" onfocus="this.value=''"></input><br>
         	<input type="text" id="lat1" size="20" value="Latitude" onfocus="this.value=''"></input>
         	<input type="text" id="long1" size="20" value="Longitude" onfocus="this.value=''"></input><br><br>
-			<input type="text" id="lat2" size="20" value="Latitude" onfocus="this.value=''"></input>
+			    <input type="text" id="lat2" size="20" value="Latitude" onfocus="this.value=''"></input>
         	<input type="text" id="long2" size="20" value="Longitude" onfocus="this.value=''"></input><br><br>
         	<button id="button" onclick="getInput();">Start</button>
 
